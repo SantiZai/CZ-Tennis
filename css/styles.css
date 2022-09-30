@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Imprima&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 html,
-body {
+body,
+.description-strings {
   scroll-behavior: smooth;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* HEADER */
@@ -49,6 +57,8 @@ body {
 }
 
 .barra-separadora {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
   box-shadow: 0px 0px 3px black;
 }
 
@@ -71,7 +81,7 @@ body {
 /* CARDS */
 .container-cards {
   margin: 5rem auto auto auto;
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -79,7 +89,7 @@ body {
 .container-cards .card-encordado {
   width: 20rem;
   text-align: center;
-  margin: 5rem 2rem;
+  margin: 5rem 4rem;
   border-radius: 5px;
 }
 .container-cards .card-encordado .card-image {
@@ -106,21 +116,50 @@ body {
   width: 100%;
   height: 220px;
   padding: 10px;
+  font-size: 14px;
   margin-top: -220px;
   transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
   border-radius: 20px;
 }
 .container-cards .card-encordado .card-description .card-title {
-  margin: 1rem auto 0.6rem auto;
+  font-family: "Imprima", sans-serif;
+  font-weight: 500;
+  margin: 0.3rem auto auto;
   padding-bottom: 0.8rem;
-  width: 70%;
+  width: 100%;
 }
 .container-cards .card-encordado .card-description .card-paragraph {
+  font-family: "Inter", sans-serif;
   border-top: 0.5px solid #ccc;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   margin: auto;
-  width: 80%;
-  padding-bottom: 1rem;
+  width: 100%;
+}
+.container-cards .card-encordado .card-description .card-paragraph .lista-cuerdas {
+  list-style: none;
+}
+.container-cards .card-encordado .card-description .card-paragraph .lista-cuerdas p {
+  text-align: start;
+  margin-bottom: 0.3rem;
+}
+.container-cards .card-encordado .card-description .card-paragraph .lista-cuerdas p:last-child {
+  margin-bottom: 0.8rem;
+}
+.container-cards .card-encordado .card-description .btn-saber-mas {
+  border-radius: 10px;
+  background: #22577a;
+  transition: all 600ms;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+}
+.container-cards .card-encordado .card-description .btn-saber-mas .link-saber-mas {
+  text-decoration: none;
+  color: #fff;
+}
+.container-cards .card-encordado .card-description .btn-saber-mas:hover {
+  background: #38a3a5;
 }
 .container-cards .card-encordado:hover .card-image {
   margin-top: -110px;
@@ -131,6 +170,29 @@ body {
   margin-top: 0;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 0px 25px -17px rgb(20, 20, 20);
+}
+
+/* MAS INFO */
+.active {
+  background-color: #00e8e8;
+}
+
+.description-strings {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.description-strings .string-description-title {
+  font-family: "Imprima", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.description-strings .string-description {
+  margin-bottom: 3rem;
+  font-family: "Inter", sans-serif;
+}
+.description-strings .string-description:last-child {
+  margin-bottom: 0px;
 }
 
 /* QUERIES */
